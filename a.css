@@ -134,16 +134,19 @@ hr{
 }
 
 .usercard .text h1{
+  font-size: 32px;
   margin-top: 20px;
 }
 
 .usercard .text p{
+  font-size: 14px;
   margin-top: 6px;
 }
 
 
 .usercard .text hr{
-  margin: 20px 0;
+  margin-top: 22px;
+  margin-bottom: 10px;
 }
 .usercard .pictureAndText {
   padding: 50px;
@@ -151,6 +154,7 @@ hr{
 
 .usercard dl dt,
 .usercard dl dd {
+  font-size: 14px;
   float: left;
   padding: 10px 0;
 }
