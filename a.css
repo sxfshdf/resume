@@ -1,136 +1,27 @@
-body {
-  background: #efefef;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-hr{
-  height: 0;
-  border: none;
-  border-top: 1px solid #dedede;  
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ol,ul {
-  list-style: none;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  font-weight: normal;
-}
-
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.topNavBar-inner {
-  padding: 0px 16px;
-}
-
-.topNavBar nav > ul {
-  list-style: none; 
-  margin: 0;
-  padding: 0;  
-}
-
-.topNavBar nav > ul > li {
-  float: left;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.topNavBar {
-  padding: 22px 0px 22px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.topNavBar nav {
-  padding-top: 2px;
-} 
-
-.topNavBar nav > ul > li > a {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-weight: bold;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: block;
-}
-
-.topNavBar nav > ul > li > a:hover {
-  border-bottom: 2px solid #e06567;
-}
-
-.topNavBar .logo {
-  font-size: 24px;
-  font-family: "Arial Black";
-  padding-bottom: 7px;
-}
-
-.topNavBar .logo .rs {
-  margin-right: 4px;
-  color: #e8676b;
-}
-
-.topNavBar .logo .card {
-  color: #9a9da2;
-}
-
-.banner {
-  height: 515px;
-  background-image: url(./img/rs-cover.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.banner .mask {
-  height: 515px;
-  background-color: rgba(44,51,64,0.8);
-}
-
-.usercard {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.32)
-}
-
-.usercard .welcome {
-  background-color: #e6686a;
-  color: white;
-  display: inline-block;
-  padding: 5px 15px;
-  position: relative;
-  border-radius: 2px;
-  vertical-align: top;
-}
-
-.usercard .welcome:before{
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 4px;
-  border-top: 10px solid #e6686a;
-  border-right: 10px solid transparent;
-}
-
+body { background: #efefef; margin: 0;}
+a { color: inherit; text-decoration: none;}
+hr{ height: 0; border: none; border-top: 1px solid #dedede;}
+* { margin: 0; padding: 0;}
+ol,ul {list-style: none;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+.clearfix::after {content: ''; display: block; clear: both;}
+.topNavBar-inner {padding: 0px 16px;}
+.topNavBar nav > ul {list-style: none; margin: 0; padding: 0;}
+.topNavBar nav > ul > li {float: left;  margin-left: 16px; margin-right: 16px;}
+.topNavBar {padding: 22px 0px 22px 0px;  position: fixed;  top: 0;  left: 0;  width: 100%;}
+.topNavBar nav {padding-top: 2px;} 
+.topNavBar nav > ul > li > a {font-size: 12px;  color: rgba(255, 255, 255, 0.7);  text-decoration: none;  font-weight: bold;  border-top: 3px solid transparent;  border-bottom: 3px solid transparent;
+  padding-top: 8px;  padding-bottom: 8px;  display: block;}
+.topNavBar nav > ul > li > a:hover {border-bottom: 2px solid #e06567;}
+.topNavBar .logo {font-size: 24px;  font-family: "Arial Black";  padding-bottom: 7px;}
+.topNavBar .logo .rs {margin-right: 4px;  color: #e8676b;}
+.topNavBar .logo .card {color: #9a9da2;}
+.banner {height: 515px;  background-image: url(./img/rs-cover.jpg);  background-position: center center;  background-size: cover;}
+.banner .mask {height: 515px;  background-color: rgba(44,51,64,0.8);}
+.usercard {max-width: 940px;  margin-left: auto;  margin-right: auto;  background-color: #fff;  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.32)}
+.usercard .welcome {background-color: #e6686a;  color: white;  display: inline-block;  padding: 5px 15px;  position: relative;  border-radius: 2px;  
+  vertical-align: top;}
+.usercard .welcome:before{content: ""; position: absolute;  top: 100%;  left: 4px;  border-top: 10px solid #e6686a;  border-right: 10px solid transparent;}
 /* .usercard .welcome .triangle {
   display: block;
   border: 8px solid transparent;
@@ -142,276 +33,52 @@ h1,h2,h3,h4,h5,h6 {
   top: 100%
 } */
 
-.usercard .picture {
-  float: left;
-}
-
-.usercard .text {
-  float: left;
-  margin-left: 64px;
-  width: 470px;
-}
-
-.usercard .text h1{
-  font-size: 32px;
-  margin-top: 20px;
-  color: #3d4451;
-  font-weight: bold;
-}
-
-.usercard .text p{
-  font-size: 14px;
-  margin-top: 6px;
-  color: #3d4451;
-}
-
-
-.usercard .text hr{
-  margin-top: 22px;
-  margin-bottom: 15px;
-}
-.usercard .pictureAndText {
-  padding: 50px;
-}
-
+.usercard .picture {float: left;}
+.usercard .text {float: left;  margin-left: 64px;  width: 470px;}
+.usercard .text h1{font-size: 32px;  margin-top: 20px;  color: #3d4451;  font-weight: bold;}
+.usercard .text p{font-size: 14px;  margin-top: 6px;  color: #3d4451;}
+.usercard .text hr{margin-top: 22px;  margin-bottom: 15px;}
+.usercard .pictureAndText {padding: 50px;}
 .usercard dl dt,
-.usercard dl dd {
-  font-size: 14px;
-  float: left;
-  padding: 10px 0;
-}
-
-.usercard dl dt {
-  width: 25%;
-  font-weight: bold;
-  color: #3d4451;
-}
-
-.usercard dl dd {
-  width: 75%;
-  color: #9da0a7;
-}
-
-.usercard > footer.media {
-  background: #e6686a;
-  text-align: center;
-}
-
-.usercard > footer.media > a {
-  display: inline-block;
-  border-radius: 50%;
-  line-height: 20px;
-  width: 44px;
-  padding: 12px 0;
-  margin: 22px 32px;
-  vertical-align: top;
-}
-
-.usercard > footer.media > a:hover {
-  background: rgba(0,0,0,0.1);
-}
-
-.usercard svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-  vertical-align: 
-}
-
-body > main {
-  margin-top: -340px;
-}
-
-body > main .downloadResume-wrapper {
-  text-align: center;
-
-}
-
-body > main .downloadResume {
-  font-size: 14px;
-  color: #3d4451;
-  line-height: 16px;
-  font-weight: bold;
-  padding: 21px 55px;
-  display: inline-block;
-  border: 1px solid #cbcdcf;
-  border-radius: 2px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  transition: box-shadow 0.24s;
-  vertical-align: top;
-}
-
-body > main .downloadResume:hover {
-  background: #e6686a;
-  color: white;
-  border: 1px solid #e6686a;
-  box-shadow: 0 4px 14px 0px rgba(0,0,0,0.24);
-}
-
-.selfIntroduction {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: #3d4451;
-  font-size: 14px;
-}
-
+.usercard dl dd {font-size: 14px;  float: left;  padding: 10px 0;}
+.usercard dl dt {width: 25%;  font-weight: bold;  color: #3d4451;}
+.usercard dl dd {width: 75%;  color: #9da0a7;}
+.usercard > footer.media {background: #e6686a;  text-align: center;}
+.usercard > footer.media > a {display: inline-block;  border-radius: 50%;  line-height: 20px;  width: 44px;  padding: 12px 0;  margin: 22px 32px;  vertical-align: top;}
+.usercard > footer.media > a:hover {background: rgba(0,0,0,0.1);}
+.usercard svg {width: 20px;  height: 20px;  fill: white;  vertical-align: top;}
+body > main {margin-top: -340px;}
+body > main .downloadResume-wrapper {text-align: center;}
+body > main .downloadResume {font-size: 14px;  color: #3d4451;  line-height: 16px;  font-weight: bold;  padding: 21px 55px;  display: inline-block;  border: 1px solid #cbcdcf;
+  border-radius: 2px;  margin-top: 40px;  margin-bottom: 20px;  transition: box-shadow 0.24s;  vertical-align: top;}
+body > main .downloadResume:hover {background: #e6686a; color: white;  border: 1px solid #e6686a;  box-shadow: 0 4px 14px 0px rgba(0,0,0,0.24);}
+.selfIntroduction {max-width: 940px;  margin-left: auto;  margin-right: auto;  text-align: center;  color: #3d4451;  font-size: 14px;}
 section.skills,
-section.portfolio {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.skills > ol {
-  padding: 42px 50px 6px;
-  margin-top: 32px;
-  background: white;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);
-}
-
+section.portfolio {max-width: 940px;  margin-left: auto;  margin-right: auto;}
+section.skills > ol {padding: 42px 50px 6px;  margin-top: 32px;  background: white; box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);}
 section.skills > h2,
-section.portfolio > h2 {
-  font-size: 34px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 60px;
-}
-
-section.skills h3 {
-  font-size: 14px;
-  line-height: 1.1;
-  padding-right: 40px;
-  margin-bottom: 5px;
-}
-
-section.skills > ol > li {
-  float: left;
-  width: 48%;
-  box-sizing: border-box;
-}
-
-section.skills > ol > li:nth-child(even) {
-  float: right;
-}
-
-section.skills .progressBar {
-  height: 5px;
-  border-radius: 2px;
-  background: rgba(232,103,107,0.2);
-  margin-bottom: 40px;
-}
-
-section.skills .progressHtml {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 64%;
-}
-
-section.skills .progressJavaScript {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 50%;
-}
-
-section.skills .progressjQuery {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 36%;
-}
-
-section.skills .progressVue {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 72%;
-}
-
-section.skills .progressReact {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 54%;
-}
-
-section.skills .progressNode {
-  height: 100%;
-  border-radius: 2px;
-  background: #e8676b;
-  width: 32%;
-}
-
-section.portfolio {
-  text-align: center;
-}
-section.portfolio > nav {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-}
-section.portfolio > nav > ol {
-  display: inline-block;
-  vertical-align: top;
-}
-
-section.portfolio > nav > ol > li {
-  float: left;
-  margin-left: 40px;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 26px;
-  cursor: pointer;
-}
-
-section.portfolio > nav > ol > li:nth-child(1) {
-  margin-left: 0;
-}
-
-section.portfolio > nav .bar {
-  height: 5px;
-  background-color: white;
-  margin-top: 16px;
-  border-radius: 2px;
-}
-
-section.portfolio > nav .barInner {
-  height: 100%;
-  background-color: #e8676b;
-  border-radius: 2px;
-  transition: all 0.24s;
-  
-}
-
-section.portfolio > nav .bar.state-1 .barInner {
-  width: 36px;
-  margin-left: 0;
-}
-
-section.portfolio > nav .bar.state-2 .barInner {
-  width: 36px;
-  margin-left: 71px;
-}
-
-section.portfolio > nav .bar.state-3 .barInner {
-  width: 96px;
-  margin-left: 142px;
-}
-
-section.portfolio .works {
-  position: relative;
-  margin-top: 22px;
-}
-
+section.portfolio > h2 {font-size: 34px;  font-weight: bold;  text-align: center;  margin-top: 60px;}
+section.skills h3 {font-size: 14px;  line-height: 1.1;  padding-right: 40px;  margin-bottom: 5px;}
+section.skills > ol > li {float: left;  width: 48%;  box-sizing: border-box;}
+section.skills > ol > li:nth-child(even) {float: right;}
+section.skills .progressBar {height: 5px;  border-radius: 2px;  background: rgba(232,103,107,0.2);  margin-bottom: 40px;}
+section.skills .progressHtml {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 64%;}
+section.skills .progressJavaScript {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 50%;}
+section.skills .progressjQuery {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 36%;}
+section.skills .progressVue {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 72%;}
+section.skills .progressReact {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 54%;}
+section.skills .progressNode {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 46%;}
+section.portfolio {text-align: center;}
+section.portfolio > nav {display: inline-block;  vertical-align: top;  text-align: center;}
+section.portfolio > nav > ol {display: inline-block; vertical-align: top;}
+section.portfolio > nav > ol > li {float: left; margin-left: 40px; font-weight: bold;  font-size: 16px;  margin-top: 26px;  cursor: pointer;}
+section.portfolio > nav > ol > li:nth-child(1) {  margin-left: 0;}
+section.portfolio > nav .bar {  height: 5px;  background-color: white;  margin-top: 16px;  border-radius: 2px;}
+section.portfolio > nav .barInner {  height: 100%;  background-color: #e8676b;  border-radius: 2px;  transition: all 0.24s;  }
+section.portfolio > nav .bar.state-1 .barInner {  width: 36px;  margin-left: 0;}
+section.portfolio > nav .bar.state-2 .barInner {  width: 36px;  margin-left: 71px;}
+section.portfolio > nav .bar.state-3 .barInner { width: 96px;  margin-left: 142px;}
+section.portfolio .works { position: relative;  margin-top: 22px;}
 section.portfolio .works .big,
-section.portfolio .works .small {
-  position: absolute;
-}
-
-section.portfolio img {
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);
-}
+section.portfolio .works .small {position: absolute;}
+section.portfolio img {box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);}
