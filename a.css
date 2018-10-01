@@ -7,12 +7,29 @@ h1,h2,h3,h4,h5,h6 {font-weight: normal;}
 .clearfix::after {content: ''; display: block; clear: both;}
 .topNavBar-inner {padding: 0px 16px;}
 .topNavBar nav > ul {list-style: none; margin: 0; padding: 0;}
-.topNavBar nav > ul > li {float: left;  margin-left: 16px; margin-right: 16px;}
-.topNavBar {padding: 22px 0px 22px 0px;  position: fixed;  top: 0;  left: 0;  width: 100%;}
+.topNavBar nav > ul > li {float: left;  margin-left: 16px; margin-right: 16px; position: relative;}
+.topNavBar {padding: 22px 0px 22px 0px;  position: fixed;  top: 0;  left: 0;  width: 100%; transition: all 1s;
+  color:rgba(255, 255, 255, 0.7);}
+.topNavBar.sticky {background: #fff; padding: 10px 0; z-index: 1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);color: #3d4451;}
 .topNavBar nav {padding-top: 2px;} 
-.topNavBar nav > ul > li > a {font-size: 12px;  color: rgba(255, 255, 255, 0.7);  text-decoration: none;  font-weight: bold;  border-top: 3px solid transparent;  border-bottom: 3px solid transparent;
-  padding-top: 8px;  padding-bottom: 8px;  display: block;}
-.topNavBar nav > ul > li > a:hover {border-bottom: 2px solid #e06567;}
+.topNavBar nav > ul > li > a {font-size: 12px; color: inherit; text-decoration: none;  font-weight: bold;  border-top: 3px solid transparent;  border-bottom: 3px solid transparent;
+  padding: 8px 0;  display: block; position: relative;}
+.topNavBar nav > ul > li.active > a::after {content:''; display: block; position: absolute; top: 95%; left: 0; width: 100%;
+  height: 3px; background: #e06567; border-radius: 1.5px; animation: menuSlider 0.3s;}
+  @keyframes menuSlider{
+    0%{ width: 0; }
+    100%{  width: 100% }
+  }
+  
+.topNavBar .submenu{display: none; position: absolute; right: 0; top: 95%; background: #fff; color: #3d4451; font-size: 12px;
+  padding: 10px 0; box-shadow: 0 0 4px rgba(0,0,0,0.3); cursor: pointer;}
+.topNavBar li.active > .submenu{display: block; animation: submenuSlider 0.3s;}
+.topNavBar .submenu > li{white-space: nowrap; padding: 8px 20px;}
+.topNavBar .submenu > li:hover{white-space: nowrap; padding: 8px 20px; background: rgba(0,0,0,0.02); color: #e06567; }
+@keyframes submenuSlider{
+  0%{margin-right: 100% ; opacity: 0;}
+  100%{margin-right: 0; opacity: 1;}
+}
 .topNavBar .logo {font-size: 24px;  font-family: "Arial Black";  padding-bottom: 7px;}
 .topNavBar .logo .rs {margin-right: 4px;  color: #e8676b;}
 .topNavBar .logo .card {color: #9a9da2;}
