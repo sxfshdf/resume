@@ -5,6 +5,10 @@ hr{ height: 0; border: none; border-top: 1px solid #dedede;}
 ol,ul {list-style: none;}
 h1,h2,h3,h4,h5,h6 {font-weight: normal;}
 .clearfix::after {content: ''; display: block; clear: both;}
+
+[data-x].offset{transform: translateY(50px)}
+[data-x]{transform: translateY(0); transition: all 0.3s;}
+
 .topNavBar-inner {padding: 0px 16px;}
 .topNavBar nav > ul {list-style: none; margin: 0; padding: 0;}
 .topNavBar nav > ul > li {float: left;  margin-left: 16px; margin-right: 16px; position: relative;}
@@ -14,13 +18,14 @@ h1,h2,h3,h4,h5,h6 {font-weight: normal;}
 .topNavBar nav {padding-top: 2px;} 
 .topNavBar nav > ul > li > a {font-size: 12px; color: inherit; text-decoration: none;  font-weight: bold;  border-top: 3px solid transparent;  border-bottom: 3px solid transparent;
   padding: 8px 0;  display: block; position: relative;}
-.topNavBar nav > ul > li.active > a::after {content:''; display: block; position: absolute; top: 95%; left: 0; width: 100%;
+.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.highlight > a::after{content:''; display: block; position: absolute; top: 95%; left: 0; width: 100%;
   height: 3px; background: #e06567; border-radius: 1.5px; animation: menuSlider 0.3s;}
-  @keyframes menuSlider{
-    0%{ width: 0; }
-    100%{  width: 100% }
-  }
-  
+@keyframes menuSlider{
+  0%{ width: 0; }
+  100%{  width: 100% }
+}
+
 .topNavBar .submenu{display: none; position: absolute; right: 0; top: 95%; background: #fff; color: #3d4451; font-size: 12px;
   padding: 10px 0; box-shadow: 0 0 4px rgba(0,0,0,0.3); cursor: pointer;}
 .topNavBar li.active > .submenu{display: block; animation: submenuSlider 0.3s;}
@@ -78,13 +83,12 @@ section.portfolio > h2 {font-size: 34px;  font-weight: bold;  text-align: center
 section.skills h3 {font-size: 14px;  line-height: 1.1;  padding-right: 40px;  margin-bottom: 5px;}
 section.skills > ol > li {float: left;  width: 48%;  box-sizing: border-box;}
 section.skills > ol > li:nth-child(even) {float: right;}
-section.skills .progressBar {height: 5px;  border-radius: 2px;  background: rgba(232,103,107,0.2);  margin-bottom: 40px;}
-section.skills .progressHtml {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 64%;}
-section.skills .progressJavaScript {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 50%;}
-section.skills .progressjQuery {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 36%;}
-section.skills .progressVue {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 72%;}
-section.skills .progressReact {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 54%;}
-section.skills .progressNode {height: 100%;  border-radius: 2px;  background: #e8676b;  width: 46%;}
+section.skills .progressBar {height: 5px;  border-radius: 2px;  background: rgba(232,103,107,0.2);  margin-bottom: 40px;
+overflow: hidden;}
+section.skills .progressBar > .progress {height: 100%;  border-radius: 2px;  background: #e8676b; 
+ transform: translateX(0); transition: all 0.5s;}
+section.skills.offset .progress{transform: translateX(-100%)}
+
 section.portfolio {text-align: center;}
 section.portfolio > nav {display: inline-block;  vertical-align: top;  text-align: center;}
 section.portfolio > nav > ol {display: inline-block; vertical-align: top;}
