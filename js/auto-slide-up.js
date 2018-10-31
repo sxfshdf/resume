@@ -13,13 +13,12 @@
         specialTags[i].classList.add('offset')
       }
 
-      this.initOffset(view)
+      this.initOffset()
       window.addEventListener('scroll',()=>{
-      this.initOffset(view)
+      this.initOffset()
       })
     },
-    initOffset: function(view){
-      this.view = view
+    initOffset: function(){ 
       let specialTags = this.view
       let minIndex = 0
       for(let i = 0; i < specialTags.length; i++){

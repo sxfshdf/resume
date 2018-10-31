@@ -46,13 +46,13 @@
             </ul>
           </li>
           <li>
-            <a href="#">日历</a>
+            <a href="#message">留言</a>
           </li>
           <li>
             <a href="#">联系方式</a>
           </li>
           <li>
-            <a href="#">其他</a>
+            <a href="#message">其他</a>
           </li>
         </ul>
       </nav>
@@ -198,9 +198,24 @@
         <div class="swiper-button-next"></div>
       </div>
     </section>
+    <section data-x id="message" class="message">
+      <h2>留言</h2>
+      <ol id="messageList"></ol>
+      <div class="addMessage">添加留言：</div>
+      <form id="postMessageForm" action="" style="">
+        <label>用户名</label>
+        <input type="text" name="name" autocomplete="off">
+        <label>内容</label>
+        <input type="text" name="content" autocomplete="off">
+        <input class="submit" type="submit" value="提交">
+      </form>
+    </section>
  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <script src="./js/message.js"></script>
+
     <script src="./js/auto-slide-up.js"></script>
     <script src="./js/sticky-topbar.js"></script>
     <script src="./js/swiper.js"></script>
