@@ -38,12 +38,11 @@
       var Message = AV.Object.extend('Message');
       var message = new Message()
       this.model.save({name:name, content:content}).then((object)=>{
-        let li = document.createElement('li')
-        li.innerText = `${object.attributes.name} :  ${object.attributes.content}`
-       
-        this.messageList.appendChild(li)
-        myform.querySelector('input[name=name]').value=''
-        myform.querySelector('input[name=content]').value=''
+          let li = document.createElement('li')
+          li.innerText = `${object.attributes.name} :  ${object.attributes.content}`
+          this.messageList.appendChild(li)
+          myform.querySelector('input[name=name]').value=''
+          myform.querySelector('input[name=content]').value=''
       })      
     },
     
@@ -65,7 +64,18 @@
     bindEvents: function(){
       this.form.addEventListener('submit',(e)=>{
         e.preventDefault()
-        this.saveMessages()
+        let name = this.form.querySelector('input[name=name]').value
+        let content = this.form.querySelector('input[name=content]').value
+        if(name===''){
+          alert('请输入用户名')
+          this.form.querySelector('input[name=name]').focus()
+        }else if(content===''){
+          alert('请输入内容')
+          this.form.querySelector('input[name=content]').focus()          
+        }else{
+          console.log(name)
+          this.saveMessages()
+        }
       })
     },
   })
